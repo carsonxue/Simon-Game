@@ -32,7 +32,7 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     $("body").addClass("game-over");
-    $("#title").text("Oops, You Remembered Wrong")
+    $("#title-one").text("Oops, You Remembered Wrong");
     $("#level-title").text("Game Over, Press Keyboard to Restart Again");
     setTimeout(function() {
       $("body").removeClass("game-over");
@@ -44,7 +44,7 @@ function checkAnswer(currentLevel) {
 function nextSequence(){
   userClickedPattern = [];
   level++;
-  $("#title").text("Remember The Color, Press In Order")
+  $("#title-one").text("Remember The Color, Press In Order");
   $("#level-title").text("Level " + level);
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColor = buttonColors[randomNumber];
